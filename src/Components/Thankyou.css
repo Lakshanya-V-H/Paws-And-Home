@@ -1,0 +1,47 @@
+.thank-you-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #e6e6e6;
+    margin-top: 100px;
+    border-radius: 5px;
+    max-width: 700px;  
+    margin-top: 13rem;
+    margin-bottom: 20px;
+}
+
+.thank-you-container .pet-image {
+    max-width: 215px;
+    border-radius: 10px;
+    /* margin-right: 20px; */
+    max-height: 440px;
+    padding: 20px;
+   
+}
+
+.thank-you-container .pet-image img{
+   border-radius: 5px;
+}
+
+.thank-you-container .text-container {
+    /* background-color: #ddd; */
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    text-align: justify;
+    font-size: 15px;
+}
+.thank-you-container .text-container span{
+    text-transform: none;
+}
+.thank-you-container .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

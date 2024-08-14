@@ -1,0 +1,174 @@
+.manage-pet-container {
+    display: flex;
+    max-height: 300vh; /* Ensures the container takes the full height of the viewport */
+    margin-top: 9.9rem;
+    /* max-height: 200vh;s */
+}
+  
+  .manage-pet-container .sidebar {
+    max-width: 220px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    max-height: 100%; /* Ensures the sidebar takes the full height of the container */
+    overflow-y: auto; /* Adds a scrollbar if the content overflows */
+    gap:10px;
+    flex-shrink: 0; /* Prevent the sidebar from shrinking */
+    flex-direction: column; /* Ensure buttons stack vertically */
+    
+  }
+  
+  .manage-pet-container .sidebar button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 1.27rem;
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  /* .manage-pet-container .sidebar button:hover {
+    background-color: #bac34e;
+  } */
+  
+  .manage-pet-container .manage-pet-content {
+    width: 80%;
+    padding: 20px;
+  }
+  
+  .manage-pet-container .pet-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    row-gap: 10px;
+  }
+  
+  .manage-pet-container .pet-card {
+    /* background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px; */
+    background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      text-align: center;
+      font-size: 1.5rem;
+      max-width: 50%;
+  }
+  
+  .manage-pet-container .search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .manage-pet-container .search-filter input, .search-filter select {
+    padding: 5px 10px;
+    margin: 5px;
+  }
+  
+  .manage-pet-container .pet-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .manage-pet-container .pet-table th,
+  .manage-pet-container  .pet-table td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: left;
+    overflow-y: auto; /* Adds a scrollbar if the content overflows */
+    font-size: 13px;
+  
+  }
+  
+  .manage-pet-container .pet-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  .manage-pet-container .pet-table td button {
+    background-color: #bac34e;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border-style: none;
+    color: white;
+    margin: 5px;
+  }
+  
+  .manage-pet-container .floating-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    z-index: 1000;
+    font-size: 13px;
+  }
+  .manage-pet-container .floating-panel h2{
+    margin:10px;
+  }
+  .manage-pet-container .floating-panel input,
+  .manage-pet-container  .floating-panel select,
+  .manage-pet-container  .floating-panel textarea {
+    width: 90%;
+    padding: 5px;
+    margin: 7px 0;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 5px;
+  
+  }
+  
+  .manage-pet-container .add-pet-btn {
+    padding:3px 3px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width:100px;
+    max-height:40px;
+    margin: 5px;
+  }
+  
+  /* .manage-pet-container .add-pet-btn:hover {
+    background-color: #bac34e;
+  } */
+  
+  .manage-pet-container .floating-panel button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .manage-pet-container .floating-panel button:first-of-type {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* .manage-pet-container .floating-panel button:first-of-type:hover {
+    background-color: #0056b3;
+  } */
+  
+  .manage-pet-container .floating-panel button:last-of-type {
+    background-color:black;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* .manage-pet-container .floating-panel button:last-of-type:hover {
+    background-color: #c82333;
+  } */
+  

@@ -1,0 +1,90 @@
+.admin-dashboard-container {
+    display: flex;
+    margin-top: 9.9rem;
+}
+
+.admin-dashboard-container .sidebar {
+    width: 220px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-dashboard-container .sidebar-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+    margin-top: 20px;
+    border-radius: 12px;
+    font-size: 1.27rem;
+    width:100%;
+}
+
+.admin-dashboard-container .sidebar-button:hover {
+    background-color: #bac34e;
+}
+
+.admin-dashboard-container .dashboard-content {
+    display: flex;
+    /* flex-direction: column; */
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+}
+
+.admin-dashboard-container .dashboard-welcome{
+    width:100%;
+}
+
+.admin-dashboard-container .dashboard-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 50%;
+}
+
+.admin-dashboard-container .dashboard-card {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(248, 252, 191, 0.148);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1 1 calc(50% - 20px);
+    max-width: 200px;
+}
+
+.admin-dashboard-container .dashboard-card h3{
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.admin-dashboard-container .dashboard-card p {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.admin-dashboard-container .dashboard-chart {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width:50%;
+    background-color: #f4f4f4;
+}
+
+.admin-dashboard-container .dashboard-chart h3{
+    font-size: 1.5rem;
+}

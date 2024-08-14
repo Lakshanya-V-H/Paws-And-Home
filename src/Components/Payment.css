@@ -1,0 +1,188 @@
+/* .payment-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+    background-color: #f9f9f9;
+    margin-top: 9.9rem;
+  }
+  
+  .payment-page h1, .payment-page h2 {
+    text-align: center;
+  }
+  
+  .payment-page .adoption-fee {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  
+  }
+  
+  .payment-page .payment-methods {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .payment-page .payment-methods button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .payment-page .payment-methods button:hover {
+    background-color: #bac34e;
+  }
+  
+  .payment-page .payment-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment-page .payment-details {
+    margin-bottom: 20px;
+  }
+  
+  .payment-page .payment-details label ,
+  .payment-page .payment-details p {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  
+  .payment-page .payment-details input,
+  .payment-page .payment-details select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+  }
+  
+  .payment-page .payment-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    background-color: #bac34e; 
+    color: white;
+    cursor: pointer;
+  }
+  
+  .payment-page .payment-form button:hover {
+    background-color: #bac34e; 
+  } */
+
+
+  .payment-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 9rem;
+  }
+  
+  .payment-module {
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white overlay */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* max-height: 460px; */
+    /* margin-top: 10rem; */
+  }
+  
+  .payment-module .payment-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .payment-module .payment-container {
+    max-width: 500px;
+    /* min-width:400px; */
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .payment-module .payment-container h1, .payment-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .payment-module .payment-container .adoption-fee {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  
+  .payment-module .payment-methods {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .payment-module .payment-methods button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .payment-module .payment-methods button:hover {
+    background-color: black;
+  }
+  
+  .payment-module .payment-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment-module .payment-details {
+    margin-bottom: 20px;
+  }
+  
+  .payment-module .payment-details label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  
+  .payment-module .payment-details input,
+  .payment-module .payment-details select {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top:0px;
+    
+  }
+  .payment-module .payment-details input{
+    height:20px;
+  }
+  
+  .payment-module .payment-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .payment-module .payment-form button:hover {
+    background-color:black;
+  }
+  

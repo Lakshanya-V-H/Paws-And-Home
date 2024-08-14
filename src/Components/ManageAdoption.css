@@ -1,0 +1,155 @@
+.manage-adoption-container {
+    display: flex;
+    min-height: 100vh; /* Ensure the container takes up the full height of the screen */
+    margin-top: 9.9rem;
+  }
+  
+  .manage-adoption-container .sidebar {
+    width: 220px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    flex-shrink: 0; /* Prevent the sidebar from shrinking */
+    display: flex;
+    flex-direction: column; /* Ensure buttons stack vertically */
+    gap: 10px;
+  }
+  
+  .manage-adoption-container .sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-size: 1.27rem;
+  }
+
+  .manage-adoption-container .sidebar button .current-page {
+    background-color: #bac34e;
+  }
+  
+  .manage-adoption-container .manage-adoption-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+  }
+  
+  .manage-adoption-container .adoption-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    row-gap: 10px;
+  }
+  
+  .manage-adoption-container .adoption-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .manage-adoption-container .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .manage-adoption-container .filters select {
+    width: 30%;
+    padding: 10px;
+  }
+  
+  .manage-adoption-container .application-list {
+    flex: 1; /* Allow the list to grow and take up available space */
+    overflow-y: auto; /* Enable vertical scrolling if the content overflows */
+  }
+  
+  .manage-adoption-container .application-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .manage-adoption-container .application-list th,
+  .manage-adoption-container .application-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 13px;
+  }
+  
+  .manage-adoption-container .application-list th {
+    font-size: 13px;
+    background-color: #f4f4f4;
+  }
+  
+  .manage-adoption-container .application-list td button {
+    background-color: #bac34e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .manage-adoption-container .application-list .accept-btn{
+    background-color: green;
+  }
+  
+  .manage-adoption-container .application-list .reject-btn{
+    background-color: red;
+  }
+  
+  .manage-adoption-container .application-list td button:first-child {
+    margin-right: 5px;
+  }
+  
+  .manage-adoption-container .floating-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .manage-adoption-container .floating-panel h2 {
+    margin-top: 0;
+    font-size: 15px;
+  }
+  
+  .manage-adoption-container .floating-panel p {
+    margin: 10px 0;
+    font-size: 15px;
+
+  }
+  
+  .manage-adoption-container .floating-panel img {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  .manage-adoption-container .floating-panel button{
+    background-color: black;
+    color:white;
+    border-radius:5px;
+  }
+  
+  .manage-adoption-container.dimmed .manage-adoption-content,
+  .manage-adoption-container.dimmed .sidebar {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  .manage-adoption-container tbody{
+    align-items: center;
+  }
+  

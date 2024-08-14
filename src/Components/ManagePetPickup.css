@@ -1,0 +1,157 @@
+.manage-pet-pickup-container {
+    display: flex;
+    height: 100vh; /* Ensures the container takes the full height of the viewport */
+    margin-top: 9.9rem;
+}
+  
+  .manage-pet-pickup-container .sidebar {
+    width: 220px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures the sidebar takes the full height of the container */
+    overflow-y: auto; /* Adds a scrollbar if the content overflows */
+    gap:10px;
+  }
+  
+  .manage-pet-pickup-container .sidebar button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.27rem;
+    text-align: left;
+    display: block;
+    width: 100%;
+  }
+  
+  .manage-pet-pickup-container .sidebar button:hover {
+    background-color: #bac34e;
+  }
+  
+  .manage-pet-pickup-container .manage-pet-pickup-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Adds a scrollbar if the content overflows */
+  }
+  
+  .manage-pet-pickup-container .pickup-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    row-gap: 10px;
+  }
+  
+  .manage-pet-pickup-container .pickup-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .manage-pet-pickup-container .request-list {
+    flex: 1; /* Allow the table to grow and take up available space */
+    overflow-y: auto; /* Enable vertical scrolling if the content overflows */
+  }
+
+  .manage-pet-pickup-container .request-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .manage-pet-pickup-container .request-list th, .request-list td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 13px;
+
+  }
+
+  .manage-pet-pickup-container .request-list th{
+    background-color: #f4f4f4;
+    font-size: 13px;
+
+  }
+  
+  .manage-pet-pickup-container .request-list button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    background-color: #bac34e;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .manage-pet-pickup-container .request-list button:hover {
+    background-color: #bac34e; 
+  }
+  
+  .manage-pet-pickup-container .floating-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    text-transform: none;
+
+  }
+  
+  .manage-pet-pickup-container .floating-panel .panel-content {
+    z-index: 1002;
+    font-size: 15px;
+   
+  }
+
+  .manage-pet-pickup-container .floating-panel .panel-content p{
+    text-transform: none;
+  }
+  
+  .manage-pet-pickup-container .dimmed-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .manage-pet-pickup-container .floating-panel input,
+  .manage-pet-pickup-container .floating-panel select,
+  .manage-pet-pickup-container .floating-panel textarea,
+  .manage-pet-pickup-container .floating-panel button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-transform: none;
+
+  }
+  
+  .manage-pet-pickup-container .floating-panel button {
+    background-color: black; 
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .manage-pet-pickup-container .floating-panel button:hover {
+    background-color: #bac34e; 
+  }
+
+  

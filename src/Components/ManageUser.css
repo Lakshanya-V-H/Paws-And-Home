@@ -1,0 +1,140 @@
+.manage-user-container {
+    display: flex;
+    min-height: 100vh; /* Ensure the container takes up the full height of the screen */
+    margin-top: 9.9rem;
+    text-transform: none;
+}
+  
+  .manage-user-container .sidebar {
+    width: 220px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Prevent the sidebar from shrinking */
+    gap:10px;
+  }
+  
+  .manage-user-container .sidebar button {
+    /* margin-bottom: 10px; */
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 1.27rem;
+    width:100%;
+  }
+  
+  .manage-user-container .manage-user-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+  }
+  
+  .manage-user-container .user-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap:10px;
+  }
+  
+  .manage-user-container .user-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    font-size: 1.4rem;
+
+  }
+  
+  .manage-user-container .search-filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .manage-user-container .search-filter input {
+    padding: 10px;
+    margin-right: 10px;
+    flex: 1; /* Allow the input to grow */
+    height:20px;
+  }
+  
+  .manage-user-container .search-filter select {
+    padding: 10px;
+  }
+  
+  .manage-user-container .user-table {
+    flex: 1; /* Allow the table to grow and take up available space */
+    overflow-y: auto; /* Enable vertical scrolling if the content overflows */
+  }
+  
+  .manage-user-container .user-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .manage-user-container .user-table th,
+  .manage-user-container .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 13px;
+    text-transform: none;
+
+  }
+  
+  .manage-user-container .user-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .manage-user-container .user-table td button {
+    margin: 5px 5px;
+    padding: 5px 10px;
+    background-color: #bac34e; /* Changed button background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Added border radius */
+  }
+  
+  .manage-user-container .floating-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .manage-user-container .floating-panel h2 {
+    margin-top: 0;
+    font-size: 15px;
+
+  }
+  
+  .manage-user-container .floating-panel p {
+    margin: 10px 0;
+    font-size: 15px;
+    text-transform: none;
+
+  }
+  
+  .manage-user-container .floating-panel button {
+    background-color: black; /* Changed close button background color */
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    margin: 5px 5px;
+  }
+  

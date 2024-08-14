@@ -1,0 +1,123 @@
+.manage-payment-container {
+    display: flex;
+    min-height: 100vh; /* Ensure the container takes up the full height of the screen */
+    margin-top: 9.9rem;
+}
+  
+.manage-payment-container .sidebar {
+    width: 220px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    flex-shrink: 0; /* Prevent the sidebar from shrinking */
+    display: flex;
+    flex-direction: column; /* Ensure buttons stack vertically */
+    gap:10px;
+  }
+  
+  .manage-payment-container .sidebar button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: black; /* Changed button background color */
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 12px; /* Added border radius */
+    font-size: 1.27rem;
+  }
+  
+  .manage-payment-container .manage-payment-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+  }
+  
+  .manage-payment-container .payment-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    row-gap: 10px;
+  }
+  
+  .manage-payment-container .payment-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .manage-payment-container .payment-table {
+    flex: 1; /* Allow the table to grow and take up available space */
+    overflow-y: auto; /* Enable vertical scrolling if the content overflows */
+  }
+  
+  .manage-payment-container .payment-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .manage-payment-container .payment-table th,
+  .manage-payment-container .payment-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  .manage-payment-container .payment-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .manage-payment-container .payment-table td button {
+    background-color: #bace34; /* Changed button background color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Added border radius */
+  }
+  
+  .manage-payment-container .floating-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .manage-payment-container .floating-panel h2 {
+    margin-top: 0;
+    font-size: 15px;
+
+  }
+  
+  .manage-payment-container .floating-panel p {
+    margin: 10px 0;
+    font-size: 15px;
+
+  }
+  
+  .manage-payment-container .floating-panel .close-button {
+    background-color: black; /* Changed close button background color */
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .manage-payment-container.dimmed .manage-payment-content,
+  .manage-payment-container.dimmed .sidebar {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  

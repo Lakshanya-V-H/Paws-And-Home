@@ -1,0 +1,309 @@
+/* .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .profile-banner {
+    background: url('./images/Profile/profile-pic1.png') no-repeat center center;
+    background-size: cover;
+    width: 40%;
+    height: 100vh;
+  }
+  
+  .profile-background {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .profile-header .fa-user {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  
+  .profile-header .fa-pen {
+    font-size: 1rem;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  
+  .profile-header-text h4 {
+    margin: 0;
+  }
+  
+  .profile-info input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .profile-info input:disabled {
+    background-color: #e9ecef;
+  }
+  
+  .profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .action-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-button:hover {
+    background-color: #0056b3;
+  }
+   */
+
+   /* .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .profile-banner {
+    background: url('./images/Profile/profile-pic2.png') no-repeat center center;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  .profile-background {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .profile-header .fa-user {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  
+  .profile-header .fa-pen {
+    font-size: 1rem;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  
+  .profile-header-text h4 {
+    margin: 0;
+    flex-grow: 1;
+    padding-left: 10px;
+  }
+  
+  .profile-info {
+    width: 100%;
+  }
+  
+  .profile-info input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    max-height: 60px;
+  }
+  
+  .profile-info input:disabled {
+    background-color: #e9ecef;
+  }
+  
+  .profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .action-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-button:hover {
+    background-color: #0056b3;
+  } */
+
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #e0dfdf;
+    margin-top: 10rem;
+  }
+  
+  .profile-container .profile-banner img {
+    border-radius: 15px;
+    width: 350px;
+    height: 550px;
+    object-fit: cover;
+    margin-right: 20px;
+    /* border: 5px solid #007bff; */
+  }
+  
+  .profile-container .profile-background {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-container .profile-content {
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .profile-container .profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .profile-container .profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .profile-container .profile-header .fa-user {
+    font-size: 3rem;
+    margin-right: 10px;
+    border: 2px solid #bac34e;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  .profile-container .profile-header .fa-pen {
+    font-size: 2.3rem;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .profile-container .profile-header .fa-pen:hover{
+    color: #bac34e;
+  }
+  .profile-container .profile-header-text h4 {
+    margin: 3px;
+    flex-grow: 1;
+    padding-left: 10px;
+    font-size: 3rem;
+  }
+  
+  .profile-container .profile-info {
+    width: 100%;
+  }
+  
+  .profile-container .profile-info input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 50px; /* Height can be adjusted here */
+  }
+  
+  .profile-container .profile-info input:disabled {
+    background-color: #f6f8f9;
+  }
+  
+  .profile-container .profile-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2px;
+  }
+  
+  .profile-container .action-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .profile-container .action-button:hover {
+    background-color: #bac34e;
+  }
+  
+  

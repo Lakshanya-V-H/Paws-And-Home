@@ -10,6 +10,7 @@ import Ruby from './images/PetOverview/Ruby.jpg';
 import ProductFrame from './ProductFrame';
 import Navbar2 from './Navbar2';
 import Footer from './Footer';
+import ProductFrame2 from './ProductFrame2';
 
 const Deals = () =>{
     let deal_products=[
@@ -18,7 +19,7 @@ const Deals = () =>{
             name:'Cizo',
             category:'Dog',
             image:Czesio,
-            price:'Yrokshire Terrier',
+            breed:'Yrokshire Terrier',
             age:2,
             prod_no:1,
         },
@@ -27,7 +28,7 @@ const Deals = () =>{
             name:'Fiona',
             category:'Cat',
             image:Fiona,
-            price:'American Whitehair',
+            breed:'American Whitehair',
             age : 8,
             prod_no:2,
         },
@@ -36,7 +37,7 @@ const Deals = () =>{
             name:'Lilo',
             category:'Dog',
             image:Lilo,
-            price:'Labrador Retriever',
+            breed:'Labrador Retriever',
             age:2,
             prod_no:3,
         },
@@ -45,7 +46,7 @@ const Deals = () =>{
             name:'Lucy',
             category:'Cat',
             image:Lucy,
-            price:'Mixed',
+            breed:'Mixed',
             age:1,
             prod_no:4,
         },
@@ -54,7 +55,7 @@ const Deals = () =>{
             name:'Marshall',
             category:'Dog',
             image:Marshall,
-            price:'French Bulldog',
+            breed:'French Bulldog',
             age : 2,
             prod_no:5,
         },
@@ -63,7 +64,7 @@ const Deals = () =>{
             name:'Merlin',
             category:'Cat',
             image:Merlin,
-            price:'Mixed',
+            breed:'Mixed',
             age:2,
             prod_no:6,
         },
@@ -72,7 +73,7 @@ const Deals = () =>{
             name:'Mia',
             category:'Cat',
             image:Mia,
-            price:'British Shorthair',
+            breed:'British Shorthair',
             age:4,
             prod_no:7,
         },
@@ -81,7 +82,7 @@ const Deals = () =>{
             name:'Pigglee',
             category:'Cat',
             image:Pigglee,
-            price:'Mixed',
+            breed:'Mixed',
             age:1,
             prod_no:8,
         },
@@ -90,7 +91,7 @@ const Deals = () =>{
             name:'Ruby',
             category:'Dog',
             image:Ruby,
-            price:'German Shephered',
+            breed:'German Shephered',
             age:8,
             prod_no:9,
         },
@@ -108,7 +109,7 @@ const Deals = () =>{
                 </div>
                 <div className="product-list">
                     {deal_products.map((product) => (
-                    <ProductFrame key={product.id} product={product} />
+                    <ProductFrame2 key={product.id} product={product} />
                     ))}
                 </div>
             </div>

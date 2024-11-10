@@ -114,18 +114,19 @@
   .payment-module .payment-container h1, .payment-container h2 {
     text-align: center;
     margin-bottom: 10px;
+    margin-top: -10px;
   }
   
   .payment-module .payment-container .adoption-fee {
     text-align: center;
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 10px;
   }
   
   .payment-module .payment-methods {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
   .payment-module .payment-methods button {
@@ -149,7 +150,7 @@
   }
   
   .payment-module .payment-details {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .payment-module .payment-details label {
@@ -161,7 +162,7 @@
   .payment-module .payment-details input,
   .payment-module .payment-details select {
     width: 85%;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;

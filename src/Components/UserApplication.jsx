@@ -3,6 +3,7 @@ import './UserApplication.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import Footer from './Footer';
 const AdoptionHistory = () => {
     // const [applications] = useState([
     //     {
@@ -47,9 +48,10 @@ const AdoptionHistory = () => {
         const storedUser = localStorage.getItem('user');
         const user = JSON.parse(storedUser)
         setUser(user);
+        console.log(storedUser);
 
         // Fetch pets from the Spring Boot backend        
-        axios.get('http://localhost:8080/petDetails/fetchAll')
+         axios.get('http://localhost:8080/petDetails/fetchAll')
         .then(response => {
             setPets(response.data);
         })
@@ -58,7 +60,7 @@ const AdoptionHistory = () => {
         });
 
         // Fetch applications from the Spring Boot backend
-        axios.get('http://localhost:8080/adoptionDetails/fetchAll')
+         axios.get('http://localhost:8080/adoptionDetails/fetchAll')
         .then(response => {
             setApplications(response.data);
         })
@@ -66,7 +68,7 @@ const AdoptionHistory = () => {
             console.error('There was an error fetching the adoption applications!', error);
         });
 
-        axios.get('http://localhost:8080/paymnetDetails/fetchAll')
+         axios.get('http://localhost:8080/paymnetDetails/fetchAll')
         .then(response => {
             setPayments(response.data);
         })
@@ -76,9 +78,10 @@ const AdoptionHistory = () => {
 
     },[])
 
-
-    const filteredApplications = applications.filter(app => app.user.user_id === user.user_id);
+    // const filteredApplications = applications.filter(app => app.user.user_id === user.user_id);
+    const filteredApplications = applications.filter(app => app.user?.user_id === user?.user_id);
     const getPetDetails = (pet_id) => pets.find(pet => pet.pet_id === pet_id);
+    
 
     // const [payments] = useState([
     //     {
@@ -123,6 +126,7 @@ const AdoptionHistory = () => {
     };
 
     return (
+        <>
         <div className="adoption-history-container">
             <h2>Adoption Application History</h2>
             <table className="adoption-history-table">
@@ -134,6 +138,7 @@ const AdoptionHistory = () => {
                         <th>Pet Image</th>
                         <th>Breed</th>
                         <th>Date of Application</th>
+                        <th>Meet And Greet Date</th>
                         <th>Adoption Fee</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -153,6 +158,7 @@ const AdoptionHistory = () => {
                             : 'Unknown'}</center></td>
                             <td>{petDetails ? petDetails.breed : 'Unknown'}</td>
                             <td>{application.applicationDate}</td>
+                            <td>{application.meetAndGreetDate ? application.meetAndGreetDate : 'N/A'}</td>
                             <td>₹ {petDetails ? petDetails.fee : 'Unknown'}</td>
                             <td>{application.status}</td>
                             <td>{renderAction(application.application_id, application.status ,petDetails ? petDetails.fee : 'Unknown' )}</td>
@@ -163,6 +169,8 @@ const AdoptionHistory = () => {
                 </tbody>
             </table>
         </div>
+        <Footer />
+        </>
     );
 };
 

@@ -5,6 +5,9 @@ import { useNavigate, useParams} from 'react-router-dom';
 import { useEffect } from 'react';
 import Footer from './Footer';
 import axios from 'axios';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const SimpleAdoptionForm = () => {
   const {all_pets} = useContext(ShopContext);
   const {prod_no} = useParams();
@@ -68,25 +71,25 @@ const SimpleAdoptionForm = () => {
             comment: comment // Update comment
           }
           
-          try
-          {
-              const response = await axios.post("http://localhost:8080/adoptionDetails/insertApplication" , updatedFormData);
-              console.log(response.data);
-              console.log(updatedFormData);
-          }
-          catch(error)
-          {
-              console.log("Error occured while posting the application" , error);
-          }          
+          // try
+          // {
+          //     const response = await axios.post("http://localhost:8080/adoptionDetails/insertApplication" , updatedFormData);
+          //     console.log(response.data);
+          //     console.log(updatedFormData);
+          // }
+          // catch(error)
+          // {
+          //     console.log("Error occured while posting the application" , error);
+          // }          
       }
       catch(error)
       {
         console.log("Error ocurred while fetching pet detail", error)
       }
       // console.log('Form submitted:', { assuranceText, comment });
-      alert("You can track your application status in your profile");
-      window.history.back();
-      // navigate('/payment');
+      // alert("You can track your application status in your profile");
+      // window.history.back();
+      navigate(`/AdoptionQuestions/${prod_no}`);
     } else {
       alert('Please type "I assure" to proceed.');
     }
@@ -115,13 +118,13 @@ const SimpleAdoptionForm = () => {
           </div>
         </div>
         <div className="simpleAdoptionForm__group">
-          <label className="simpleAdoptionForm__label">Comments</label>
+          {/* <label className="simpleAdoptionForm__label">Comments</label>
           <textarea 
             value={comment} 
             onChange={(e) => setComment(e.target.value)} 
             className="simpleAdoptionForm__textarea"
             placeholder="Leave a comment"
-          />
+          /> */}
         </div>
         <button 
           type="submit" 
@@ -129,7 +132,8 @@ const SimpleAdoptionForm = () => {
           className="simpleAdoptionForm__submitButton"
           disabled={!isAssured}
         >
-          Submit Adoption Application
+          Next 
+          <FontAwesomeIcon className="fas-fa-arrow-right" icon={faArrowRight} />
         </button>
       </div>
       <div className="simpleAdoptionForm__petDetails">

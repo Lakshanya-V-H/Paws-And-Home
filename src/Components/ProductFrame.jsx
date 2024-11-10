@@ -3,17 +3,15 @@ import './ProductFrame.css';
 import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
-    const { id, name,category,image,price,age,prod_no } = product;
-    // const {addToCart} = useContext(ShopContext);
+    const { pet_id, pet_name,species,image,breed,age} = product;
     return (
-      <div key={id} className="product-container">
-        <img src={image} alt={name} className="product-image" />
+      <div key={pet_id} className="product-container">
+        <img src={`data:image/jpeg;base64,${image}`} alt={pet_name} className="product-image" />
         <div className="product-details">
-          <h3>{name}</h3>
-          <p>Breed: {price}</p>
+          <h3>{pet_name}</h3>
+          <p>Breed: {breed}</p>
           <p>Age: {age} years</p>
-          {/* <button className='btn' onClick={()=>addToCart(prod_no)}>View Details</button> */}
-          <Link to={`/product/${prod_no}`}><button className='btn'>View Details</button></Link>
+          <Link to={`/product/${pet_id}`}><button className='btn'>View Details</button></Link>
         </div>
       </div>
     );

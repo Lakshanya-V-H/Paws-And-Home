@@ -82,6 +82,7 @@
     border: 1px solid #ddd;
     padding: 8px;
     font-size: 13px;
+    justify-content: space-between;
   }
   
   .manage-adoption-container .application-list th {
@@ -96,6 +97,10 @@
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
+  }
+
+  .manage-adoption-container .application-list td .view-application-btn{
+    background-color: rgb(34, 34, 34);
   }
   
   .manage-adoption-container .application-list .accept-btn{
@@ -119,6 +124,23 @@
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+  }
+
+  .manage-adoption-container .floating-panel .adoption-panel{
+    display: flex;
+    z-index: 1500;
+
+  }
+
+  .manage-adoption-container .floating-panel .adoption-panel tr{
+    text-align: left;
+  }
+  .manage-adoption-container .floating-panel .adoption-panel th ,
+  .manage-adoption-container .floating-panel .adoption-panel button ,
+  .manage-adoption-container .floating-panel .adoption-panel td {
+    font-size: 14px;
+    /* font-weight: normal; */
+    padding:7px;
   }
   
   .manage-adoption-container .floating-panel h2 {

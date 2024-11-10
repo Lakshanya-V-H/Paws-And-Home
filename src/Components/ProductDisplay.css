@@ -24,8 +24,10 @@
 
 }
 .productdisplay-main-img{
-    max-width:586px;
-    max-height:700px;
+    /* max-width:586px;
+    max-height:700px; */
+    max-width:386px;
+    max-height:500px;
     padding: 3px;    
     background-color:#cbcbcb99;
 }
@@ -89,7 +91,9 @@
 
 .productdisplay-right-description-details span
 {
-    font-size:1.3rem;
+    /* font-size:1.3rem; */
+    font-size: 14px;
+    text-align: justify;
     
 }
 .productdisplay-right-description-details h2{
@@ -103,7 +107,8 @@
     flex-direction: column;
     margin:30px 0px;
     gap: 20px;
-    font-size:1.3rem;
+    /* font-size:1.3rem; */
+    font-size: 14px;
 
 }
 

@@ -28,7 +28,8 @@ const ManageAdoption = () => {
   const[applications,setApplications] = useState([]);
   const [pets,setPets] = useState([]);
   const [users,setUsers] = useState([]);
-    
+  const [isViewApplicationPanelOpen, setIsViewApplicationPanelOpen] = useState(false);
+  const [currentApplication, setCurrentApplication] = useState(null);
 
   useEffect(()=>{
     // Fetch users from the Spring Boot backend
@@ -110,18 +111,33 @@ const ManageAdoption = () => {
     setCurrentUser(user);
     setIsViewUserPanelOpen(true);
     setIsViewPetPanelOpen(false);
+    setIsViewApplicationPanelOpen(false);
   };
 
   const openViewPetPanel = (pet_id) => {
     const pet = pets.find(pet => pet.pet_id === pet_id);
     setCurrentPet(pet);
     setIsViewUserPanelOpen(false);
+    setIsViewApplicationPanelOpen(false);
     setIsViewPetPanelOpen(true);
   };
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     setFilters({ ...filters, [name]: value });
+  };
+
+  const handleViewDetails = (application_id) => {
+    const application = applications.find(app => app.application_id === application_id);
+    setCurrentApplication(application);
+    setIsViewApplicationPanelOpen(true);
+    setIsViewUserPanelOpen(false);
+    setIsViewPetPanelOpen(false);    
+  };
+
+  const handleClosePanel = () => {
+    setIsViewApplicationPanelOpen(false);
+    setCurrentApplication(null);
   };
 
   const filteredApplications = applications.filter(app => {
@@ -132,7 +148,7 @@ const ManageAdoption = () => {
   });
 
   return (
-    <div className={`manage-adoption-container ${isViewUserPanelOpen || isViewPetPanelOpen ? 'dimmed' : ''}`}>
+    <div className={`manage-adoption-container ${isViewUserPanelOpen || isViewPetPanelOpen || isViewApplicationPanelOpen ? 'dimmed' : ''}`}>
       <div className="sidebar">
         <button onClick={() => window.location.href='/admin-dashboard'}>Dashboard</button>
         <Link to={`/manage-user`}><button>Manage Users</button></Link>
@@ -193,7 +209,7 @@ const ManageAdoption = () => {
                 <th>User</th>
                 <th>Pet</th>
                 <th>Status</th>
-                <th>Comments</th>
+                <th>Details</th>
                 <th>Date</th>
                 <th>Actions</th>
               </tr>
@@ -209,7 +225,9 @@ const ManageAdoption = () => {
                     <button onClick={() => openViewPetPanel(application.pet_id)} className='view-pet-btn'>View Pet</button>
                   </td>
                   <td>{application.status}</td>
-                  <td>{application.comments}</td>
+                  <td>
+                    <button onClick={() => handleViewDetails(application.application_id)} className='view-application-btn'>View Details</button>
+                  </td>
                   <td>{application.applicationDate}</td>
                   <td>
                     {/* {application.status === 'Pending' && ( */}
@@ -250,10 +268,53 @@ const ManageAdoption = () => {
           <p>Gender: {currentPet.gender}</p>
           <p>Description: {currentPet.description}</p>
           <p>Status: {currentPet.status}</p>
-          <img src={currentPet.photo} alt={currentPet.pet_name} />
+          <img src={currentPet.image} alt={currentPet.pet_name} />
           <button onClick={() => setIsViewPetPanelOpen(false)}>Close</button>
         </div>
       )}
+      {isViewApplicationPanelOpen && currentApplication && (
+        <div className="floating-panel">
+          <div className='adoption-panel'>
+          <div className="panel-section left-section">
+            <table>
+              <tbody>
+                <tr><th>Number of Adults</th><td>{currentApplication.numberOfAdults}</td></tr>
+                <tr><th>Number of Children</th><td>{currentApplication.numberOfChildren}</td></tr>
+                <tr><th>Ages of Children</th><td>{currentApplication.agesOfChildren}</td></tr>
+                <tr><th>Household Agreement</th><td>{currentApplication.householdAgreement}</td></tr>
+                <tr><th>Allergies to Pets</th><td>{currentApplication.allergiesToPets}</td></tr>
+                <tr><th>Type of Residence</th><td>{currentApplication.residenceType}</td></tr>
+                <tr><th>Rent or Own Home</th><td>{currentApplication.rentOrOwn}</td></tr>
+                <tr><th>Lease Allow Pets</th><td>{currentApplication.leaseAllowsPets ? currentApplication.leaseAllowsPets : 'N/A'}</td></tr>
+                <tr><th>Landlord Name</th><td>{currentApplication.landlordName ? currentApplication.landlordName : 'N/A'}</td></tr>
+                <tr><th>Landlord Contact</th><td>{currentApplication.landlordContact ? currentApplication.landlordContact : 'N/A'}</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="panel-section right-section">
+            <table>
+              <tbody>
+                <tr><th>Owned Pets Before</th><td>{currentApplication.ownedPetsBefore}</td></tr>
+                <tr><th>Previous Pets</th><td>{currentApplication.previousPetsOutcome ? currentApplication.previousPetsOutcome: 'N/A'}</td></tr>
+                <tr><th>Current Pets</th><td>{currentApplication.otherPetsDetails ? currentApplication.otherPetsDetails : 'N/A'}</td></tr>
+                <tr><th>Primary Caretaker</th><td>{currentApplication.primaryCaretaker}</td></tr>
+                <tr><th>Hours Alone</th><td>{currentApplication.hoursAlone}</td></tr>
+                <tr><th>Daytime Location</th><td>{currentApplication.daytimeLocation}</td></tr>
+                <tr><th>Sleep Location</th><td>{currentApplication.sleepLocation}</td></tr>
+                <tr><th>Excercise Plan</th><td>{currentApplication.exercisePlan ? currentApplication.exercisePlan : 'N/A'}</td></tr>
+                <tr><th>Financial Preparedness</th><td>{currentApplication.financialPreparedness}</td></tr>
+                <tr><th>Meet And Greet</th><td>{currentApplication.meetAndGreet}</td></tr>
+                <tr><th>Meet And Greet Date</th><td>{currentApplication.meetAndGreetDate ? currentApplication.meetAndGreetDate: 'N/A'}</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          </div>
+          <button onClick={handleClosePanel} className="close-panel-btn">Close</button>
+        </div>
+      )}
+
     </div>
   );
 };

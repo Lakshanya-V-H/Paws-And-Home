@@ -14,7 +14,7 @@ const ManagePet = () => {
 
   const [pets,setPets] = useState([]);
   useEffect(() => {
-    // Fetch users from the Spring Boot backend
+    // Fetch pets from the Spring Boot backend
     axios.get('http://localhost:8080/petDetails/fetchAll')
         .then(response => {
             setPets(response.data);
@@ -132,10 +132,12 @@ const ManagePet = () => {
     }  
     formData.append('gender', currentPet.gender);
     formData.append('description', currentPet.description);
+    console.log(currentPet.description);
     formData.append('status', currentPet.status);
     formData.append('fee', currentPet.fee);
   
     try {
+      
       const response = await axios.put(`http://localhost:8080/petDetails/updatePet/${currentPet.pet_id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',

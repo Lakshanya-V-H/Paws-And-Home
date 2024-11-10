@@ -139,7 +139,7 @@ function Login() {
     }
 
     const adminData = {
-        email:'admin@gmail.com'
+        email:'admin@pah.com'
     }
 
     const handleSubmit = async (e) => {
